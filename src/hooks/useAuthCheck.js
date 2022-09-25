@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { signin } from '../features/auth/authSlice';
+import { signIn } from '../features/auth/authSlice';
 
 export default function useAuthCheck() {
 	const [authChecked, setAuthChecked] = useState(false);
@@ -9,7 +9,7 @@ export default function useAuthCheck() {
 	useEffect(() => {
 		let auth = JSON.parse(localStorage.getItem('auth'));
 		if (auth && auth.user && auth.accessToken) {
-			dispatch(signin({ user: auth.user, accessToken: auth.accessToken }));
+			dispatch(signIn({ user: auth.user, accessToken: auth.accessToken }));
 		}
 		setAuthChecked(true);
 	}, [dispatch]);

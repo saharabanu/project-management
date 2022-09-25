@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { logout } from '../auth/authSlice';
+import { logOut } from '../auth/authSlice';
 
 const baseQuery = fetchBaseQuery({
 	baseUrl: process.env.REACT_APP_API_URL,
@@ -19,12 +19,11 @@ const apiSlice = createApi({
 		let result = await baseQuery(args, api, extraOptions);
 
 		if (result?.error?.status === 401) {
-			api.dispatch(logout());
+			api.dispatch(logOut());
 			localStorage.clear();
 		}
 		return result;
 	},
-	// tagTypes: ['Team'],
 	endpoints: () => ({}),
 });
 

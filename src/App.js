@@ -4,6 +4,7 @@ import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import useAuthCheck from './hooks/useAuthCheck';
 import Login from './pages/Login/Login';
+import Projects from './pages/Projects/Projects';
 import Teams from './pages/Teams/Teams';
 
 
@@ -18,6 +19,7 @@ function App() {
   <Routes>
     <Route path="/" element={<Login/>}/>
     <Route path="/teams" element={<PrivateRoute><Teams/></PrivateRoute>}/>
+    <Route path="/projects" element={<PrivateRoute><Projects/></PrivateRoute>}/>
 
     
     <Route path="*" element={<NotFound/>}/>

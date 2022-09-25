@@ -2,10 +2,9 @@ import moment from 'moment';
 import React from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
-// import { useDrag } from 'react-dnd';
 import { useSelector } from 'react-redux';
 import { useDeleteProjectMutation } from '../../features/project/projectApi';
-import { useOnClickOutside } from '../../utils';
+import { hexToRGB, useOnClickOutside } from '../../utils';
 import { useDrag } from 'react-dnd';
 
 
@@ -74,7 +73,7 @@ const Project =({ project }) =>{
 
 			<span
 				className='flex items-center h-6 px-3 text-xs font-semibold text-green-500 bg-green-100 rounded-full'
-				// style={{ backgroundColor: hexToRGB(color, 0.2), color: hexToRGB(color) }}
+				style={{ backgroundColor: hexToRGB(color, 0.2), color: hexToRGB(color) }}
                 >
 				{teamName}
 			</span>

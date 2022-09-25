@@ -1,4 +1,3 @@
-import { useDispatch } from 'react-redux';
 import Footer from '../../Shared/Footer/Footer';
 import ProjectNavigation from '../../Shared/ProjectNavigation/ProjectNavigation';
 import { DndProvider } from 'react-dnd';
@@ -7,7 +6,7 @@ import Board from './Board';
 
 
 const Projects = () => {
-	const dispatch = useDispatch();
+
 
 	
 	return (

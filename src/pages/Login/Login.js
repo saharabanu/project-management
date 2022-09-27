@@ -83,6 +83,17 @@ function Login() {
 					</form>
 
 					{error !== '' && <Error message={error} />}
+
+                     <p>For User login testing</p>
+					<p>Email: sahara@gmail.com  ,   password: 111111 <br />
+					Email: test@gmail.com    ,   password: test
+					<br />
+					Email: test1@gmail.com   ,    password: test
+					<br />Email: test2@gmail.com  ,   password: test
+					<br />Email: test3@gmail.com  ,   password: test</p>
+					
+					
+					
 					
 				</div>
 			</div>

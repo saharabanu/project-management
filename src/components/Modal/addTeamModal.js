@@ -37,7 +37,7 @@ function AddTeamModal({ control }) {
 				<br />
 				<input className="border mb-2 py-3 px-2"
 					type='text'
-					placeholder='Any color'
+					placeholder='Any hash Color code'
 					required
 					onChange={(e) => setColor(e.target.value)}
 					style={{outline:"none"}}/>

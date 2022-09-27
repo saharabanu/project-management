@@ -36,6 +36,7 @@ function AddProjectModal({ control, assignedTeams }) {
 	};
 
 	return (
+		<>
 		<Modal control={control}>
 			<form onSubmit={handleSubmit}>
 				<Select
@@ -45,8 +46,10 @@ function AddProjectModal({ control, assignedTeams }) {
 					isSearchable={true}
 					onChange={(selectedOption) => setFormData({ ...formData, team: selectedOption.value })}
 				/>
+				<br />
 
 				<input
+				className='border p-3'
 					type='text'
 					placeholder='Short desc'
 					name='desc'
@@ -54,7 +57,9 @@ function AddProjectModal({ control, assignedTeams }) {
 					onChange={handleChange}
 					value={formData?.title}
 				/>
+				<br />  <br />
 				<input
+				className='border p-3'
 					type='text'
 					placeholder='Avatar-url'
 					name='avatar'
@@ -77,7 +82,12 @@ function AddProjectModal({ control, assignedTeams }) {
 					</button>
 				</div>
 			</form>
+			<br />
+			<p>Avatar Link: <span className='font-bold'>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vYs1mwYQiWFiohg1XwoNh-uje0zyCeyklreIpSA8vA&s</span></p>
 		</Modal>
+
+		
+		</>
 	);
 }
 

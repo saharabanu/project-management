@@ -11,7 +11,7 @@ const ProjectNavigation = () => {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.auth) || {};
     const handleSearch = (e) => {
-		dispatch(search(e.target.value));
+		dispatch(search(e.target.value.toLowerCase()));
 	};
 
     const handleLogOut = () => {

@@ -2,7 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logOut } from '../../features/auth/authSlice';
-import loginImg from '../../images/logo.png';
+
+
 
 const Navigation = () => {
     const dispatch = useDispatch();
@@ -16,7 +17,8 @@ const Navigation = () => {
     <div
         className=" flex items-center flex-shrink-0  w-full h-16 px-10 bg-white bg-opacity-75"
     >
-        <img src={loginImg } alt="logo"className="h-10 w-10" />
+        
+        
         <div className="ml-10">
             <Link to="/projects"
                 className="mx-2 text-sm font-semibold text-indigo-700"

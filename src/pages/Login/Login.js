@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Error from '../../components/UiLoader/Error';
 import { useLoginMutation } from '../../features/auth/authApi';
-import logoImg from '../../images/logo.png';
+
 function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
@@ -31,7 +31,7 @@ function Login() {
 			<div className='min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8'>
 				<div className='max-w-md w-full space-y-8'>
 					<div>
-						<img className='mx-auto h-12 w-auto' src={logoImg } alt='Learn with Sumit' />
+						
 						<h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>Sign in to your account</h2>
 					</div>
 					<form className='mt-8 space-y-6' onSubmit={handleSubmit}>

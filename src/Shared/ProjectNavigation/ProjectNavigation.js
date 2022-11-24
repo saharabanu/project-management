@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { logOut } from '../../features/auth/authSlice';
 import { debounce } from '../../utils'
 
-import loginImg from '../../images/logo.png';
+
 import { search } from '../../features/project/projectSlice';
 
 const ProjectNavigation = () => {
@@ -22,7 +22,7 @@ const ProjectNavigation = () => {
     <div
         className=" flex items-center flex-shrink-0  w-full h-16 px-10 bg-white bg-opacity-75"
     >
-        <img src={loginImg } alt="logo"className="h-10 w-10" />
+        
         <input
 						className='flex items-center h-10 px-4 ml-10 text-sm bg-gray-200 rounded-full focus:outline-none focus:ring'
 						type='search'
